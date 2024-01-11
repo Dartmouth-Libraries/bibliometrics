@@ -1,8 +1,11 @@
-# Sample GitLab Project
+# Bibliometrics
 
-This sample project shows how a project in GitLab looks for demonstration purposes. It contains issues, merge requests and Markdown files in many branches,
-named and filled with lorem ipsum.
+This project contains Python code for merging, wrangling, and analyzing bibliometric data. 
 
-You can look around to get an idea how to structure your project and, when done, you can safely delete this project.
+At the moment, this code is intended for use with Web of Science downloaded from their online database.
 
-[Learn more about creating GitLab projects.](https://docs.gitlab.com/ee/gitlab-basics/create-project.html)
+In the future, we will add code for working with Web of Science data from other platforms (i.e. their API) or for working with other bibliometric datasets altogether.
+
+## Instructions for acquiring Web of Science data
+
+## Instructions for cloning this repo on your computer
