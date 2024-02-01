@@ -10,14 +10,15 @@
 *.csv
 
 #sub-directories
-old/
-test/
-.conda/
+data/*.csv
 journal_impact_Streeter_Henderson/
+old/
 resilience/
+test/
 wos-col-history-americas/
 wos-xml/
-data/*.csv
+.conda/
+
 
 
 # Byte-compiled / optimized / DLL files
