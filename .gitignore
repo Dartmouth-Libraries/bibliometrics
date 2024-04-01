@@ -7,13 +7,13 @@
 *workspace
 
 #data files
-*.csv
+#*.csv
 
 #sub-directories
-data/*.csv
+#data/*.csv
 journal_impact_Streeter_Henderson/
 old/
-resilience/
+#resilience/
 test/
 wos-col-history-americas/
 wos-xml/

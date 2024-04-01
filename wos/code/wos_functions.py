@@ -9,6 +9,7 @@ wos_groups_sub = wos_groups.loc[:, ["Category", "Group"]]
 
 groupsums = pd.read_csv("../data/wos_group_counts_Apr2024.csv", encoding="utf-8")
 
+
 # strip leading / trailing punctuation
 def strip_outer_punct(txt: str):
     newtxt = re.sub(r"^[\W\s]*(.*?)[\W\s]*$", r"\1", txt)
