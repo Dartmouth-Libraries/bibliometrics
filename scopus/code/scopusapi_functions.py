@@ -168,7 +168,7 @@ def get_scopus_abstractinfo(eid: int|str):
 """
 
 
-def get_scopus_abstractinfo2(eid: int | str, coldict: dict):
+def get_scopus_abstractinfo(eid: int | str, coldict: dict):
     """
     Reads in a Scopus eid for a document
     #and a dictionary of columns (key = new column name, value = matching scopus field)
