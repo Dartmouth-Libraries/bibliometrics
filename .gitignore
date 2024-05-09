@@ -9,6 +9,7 @@
 #data files
 #*.csv
 docdata*.csv
+authordata*
 
 #sub-directories
 #data/*.csv
