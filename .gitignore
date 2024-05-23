@@ -13,6 +13,7 @@ authordata*
 
 #sub-directories
 #data/*.csv
+hidden-data/
 journal_impact_Streeter_Henderson/
 old/
 #resilience/
