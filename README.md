@@ -1,12 +1,14 @@
 # Bibliometrics
 
-In this repository, you can find Python code for compiling, wrangling, analyzing, and visualizing bibliometrics data.
+In this repository, you can find Python code for compiling bibliometric data from APIs (and from online bibliometric databases), and wrangling, analyzing, and visualizing this data.
 
-At the moment, we have only included code for working with data downloaded from the Web of Science online database.
+## Directory Contents
 
-In the future, we will add resources for working with the Web of Science API as well other databases altogether.
+**scopus/**: notebooks and code for compiling data from the Scopus API using the *pybliometrics* package.
 
-## Contents
+**wos/**: notebooks and code for compiling data from the Web of Science Start API and from the WoS online database.
+
+## README Contents
 
 ```
 1. Instructions for cloning this repository to your computer
