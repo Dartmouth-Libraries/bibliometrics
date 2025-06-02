@@ -13,13 +13,16 @@ In this repository, you can find Python code for compiling bibliometric data fro
 ```
 1. Instructions for cloning this repository to your computer
 2. Instructions for modifying the project locally
-3. Guide to this project's code
+3. Acquring Bibliometric Data (API Keys, etc.)
+
+```
+<!--4. Guide to this project's code
     a. Wrangling data
     b. Modifying the data
     c. Metadata analysis
     d. Text Analysis
     e. Citation Analysis
-```
+    -->
 
 ## 1 Instructions for cloning this repository to your computer
 
@@ -116,22 +119,55 @@ In this repository, you can find Python code for compiling bibliometric data fro
 
 #### 2.2.3 Adding, Committing, and Pushing the Modified File to the Remote Repository
 
+## 3. Acquiring Bibliometric Data
 
-## 3. Guide to this project's code
+### 3.1. Web of Science
 
-### 3.1 Wrangling data
+Dartmouth community members may access Web of Science data in three different ways:
+
+1. Through the [Web of Science web interface](https://www-webofscience-com.dartmouth.idm.oclc.org/wos/woscc/basic-search) - accessible from campus or with a Dartmouth VPN.
+
+2. Using the Web of Science [Starter API](https://researchguides.dartmouth.edu/c.php?g=59725&p=9913657). 
+
+3. With the [Web of Science xml dataset](https://dartmouth.libapps.com/libguides/admin_c.php?g=59725&p=9826962). *This last option is the most complicated and should only be considered for those projects where the data available via options 1 and 2 above are not sufficient.*
+
+For more on these options, please view Research Data Services'  Library Guide to [Accessing Web of Science Data](https://researchguides.dartmouth.edu/c.php?g=59725&p=9910244).
+
+#### 3.1.1. Web of Science Web Interface.
+
+ You can perform simple or advanced searches, then export the metadata from your results. You may export between 500 and 1000 records at a time (depending on the format of exported documents you choose: Excel, plain text files, tab-delimited files, etc.). Most researchers will probably prefer this method as it is by far the easiest to begin (no special access requests required nor programming knowledge needed). 
+
+ Note: if you want citation / reference data for works cited by each document in your result when you select "Export" you will need to:
+ 
+ + choose to export these records as a plain-text or tab-delimited file (the Excel option does not allow citation data).
+ 
+ + select **Full Record and Cited References** from the export menu (note: this will reduce the number of records you can export at one time from 1000 to 500).
+
+ #### 3.1.2. Web of Science Starter API
+
+The Dartmouth Libraries currently holds a license to allow all Dartmouth Researchers use of the Web of Science Starter API. To acquire an API KEY for the Starter API, please follow instructions from Research Data Services's [Web of Science APIs](https://researchguides.dartmouth.edu/c.php?g=59725&p=9913657) Guide.
+
+#### 3.1.2. Web of Science XML / SQL Database
+
+Please contact Research Data Services for help accessing the Web of Science XML or SQL databases.
+
+<!-->
+## 4. Guide to this project's code
+
+### 4.1 Wrangling data
 
 1. Merging and subsetting Web of Science files
 
 
-### 3.2 Modifying the data
+### 4.2 Modifying the data
 1. Calculating author position
 2. ??
 
-### 3.3 Analyzing bibliometric metadata
+### 4.3 Analyzing bibliometric metadata
 
 
-### 3.4 Text Analysis
+### 4.4 Text Analysis
 
 
-### 3.5 Citation Analysis
+### 4.5 Citation Analysis
+-->
