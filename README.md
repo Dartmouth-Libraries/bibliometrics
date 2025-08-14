@@ -64,26 +64,29 @@ The Dartmouth Libraries currently holds a license to allow all Dartmouth Researc
 Please contact Research Data Services for help accessing the Web of Science XML or SQL databases. Once we decide this is the best option for you, we can give you login credentials for this database, which you can access using our [Web of Science SQL](https://github.com/Dartmouth-Libraries/web-of-science-sql) repository.
 
 
-## 4. Guide to this project's code
+## 2. Guide to this project's code
 
-### 4.1 Wrangling data
+### 2.1 Accessing Data via Scopus API
+
+### 2.2 Accessing Data via Web of Science API
+
+### 2.1 Wrangling data
 
 1. Merging and subsetting Web of Science files. 
 
 If you used the Web of Science online database - and your results exceeded 500 records - you will have downloaded multiple tab-delimited files (our recommended export format). After placing all exported tab-delimited files into one common folder, you can use the [Merge Multiple TSVs notebook](wos/notebooks/01_merge_multiple_tsvs.ipynb) to merge these files into one .csv file.
 
 
-### 4.2 Modifying the data
+### 2.2 Modifying the data
 1. Calculating author position
-2. ??
+2. [Remove self citations](notebooks_general\remove-self-citations.ipynb)
 
-### 4.3 Analyzing bibliometric metadata
+### 2.3 Analyzing bibliometric metadata
 
 1. Perform some preliminary exploratory data visualization with the [Metadata Analysis of Web of Science Data notebook](wos/notebooks/02_full-metadata-analysis.ipynb).
 
 
-### 4.4 Text Analysis
+### 2.4 Text Analysis
 
 
-### 4.5 Citation Analysis
--->
+### 2.5 Citation Analysis
