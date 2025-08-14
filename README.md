@@ -68,6 +68,14 @@ Please contact Research Data Services for help accessing the Web of Science XML 
 
 ### 2.1 Accessing Data via Scopus API
 
+1. [Intro to the Scopus APIs notebook](scopus\notebooks\01_intro_to_Scopus_API.ipynb) - how to get started
+
+2. [Search for Authors and Retrieve Their Data notebook](scopus\notebooks\02_author-search-and-retrieval.ipynb)
+
+3. [Document Search and Retrieval notebook](scopus\notebooks\03_document-search-and-retrieval.ipynb) - Search for documents by keywords in a variety of fields (i.e. abstract, author keywords, title, etc.)
+
+4. [Retrieve Data by Affiliation](scopus\notebooks\04_affiliation-search_retrieve-ids.ipynb)
+
 ### 2.2 Accessing Data via Web of Science API
 
 ### 2.1 Wrangling data
