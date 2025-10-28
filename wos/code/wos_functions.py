@@ -16,7 +16,10 @@ def strip_outer_punct(txt: str):
     return newtxt
 
 
-def wos_add_and_explode_groups(df: pd.DataFrame):
+def wos_add_and_explode_groups(
+        df: pd.DataFrame,
+        #col_rename_dict: dict={}
+        ):
     """
     Reads in a WoS dataframe (created from a csv file with
         two-letter abbreviations like "PT" and "AU")
@@ -25,19 +28,27 @@ def wos_add_and_explode_groups(df: pd.DataFrame):
     """
     print(f"original dataset has {df.shape[0]} rows and {df.shape[1]} columns")
 
+    # rename used columns
+    new_colnames = {
+        "UT": "wos_id",
+        "WC": "wos_categs",
+    }
+    df = df.rename(columns = new_colnames)
+
     # Clean df and explode by "WC" categories
-    df.loc[:, "WC"] = df.loc[:, "WC"].fillna("")    
-    df['wos_categs'] = df['WC'].str.split(';')
-    df_wc_explode = df.explode("wos_categs")
-    df_wc_explode['wos_categs'] = df_wc_explode['wos_categs']\
+    df.loc[:, "wos_categs"] = df.loc[:, "wos_categs"].fillna("")    
+    df['wos_categs_list'] = df['wos_categs'].str.split(';')
+    df_wc_explode = df.explode("wos_categs_list")
+    df_wc_explode['wos_categs_list'] = df_wc_explode['wos_categs_list']\
         .apply(strip_outer_punct)
-    df_wc_explode["wos_categs"] = df_wc_explode["wos_categs"].fillna("")
-    df_wc_explode["wos_categs"] = df_wc_explode["wos_categs"].str.lower()
-    print(f"exploding by wos_categ (WC) produces a df with {df_wc_explode.shape[0]} rows and {df_wc_explode.shape[1]} columns")
+    df_wc_explode["wos_categs_list"] = df_wc_explode["wos_categs_list"].fillna("")
+    df_wc_explode["wos_categs_list"] = df_wc_explode["wos_categs_list"].str.lower()
+    print(f"exploding by wos_categ (wos_categs) produces a df \
+          with {df_wc_explode.shape[0]} rows and {df_wc_explode.shape[1]} columns")
 
     # add in WoS group data
     df2 = pd.merge(df_wc_explode, wos_groups_sub, how="inner", 
-                   left_on="wos_categs", right_on="Category")
+                   left_on="wos_categs_list", right_on="Category")
 
     # explode by groups
     df2["Group"] = df2["Group"].fillna("")
@@ -46,9 +57,13 @@ def wos_add_and_explode_groups(df: pd.DataFrame):
     df2_explode = df2.explode("Group")
 
     # need to remove duplicate group categories 
-    df2_explode = df2_explode.drop_duplicates(subset=["UT", "Group"])
+    df2_explode = df2_explode.drop_duplicates(subset=["wos_id", "Group"])
 
-    print(f"after adding in WoS groups and also exploding by groups, the resulting df has {df2_explode.shape[0]} rows and {df2_explode.shape[1]} columns")
+    print(
+        f"after adding in WoS groups and also exploding by groups, \
+            the resulting df has \
+                {df2_explode.shape[0]} rows and {df2_explode.shape[1]} columns"
+        )
     return df2_explode
 
 
