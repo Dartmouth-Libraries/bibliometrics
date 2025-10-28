@@ -76,25 +76,32 @@ Please contact Research Data Services for help accessing the Web of Science XML 
 
 4. [Retrieve Data by Affiliation](scopus\notebooks\04_affiliation-search_retrieve-ids.ipynb)
 
-### 2.2 Accessing Data via Web of Science API
+### 2.2 Accessing Data via Web of Science Starter API
 
-### 2.1 Wrangling data
+1. [Intro to the Web of Science Starter API](wos\starter-api\01_working-with-starterAPI.ipynb)
+
+2. [Using Web of Science Starter API to retrieve author information notebook](wos\starter-api\02_starterAPI_getauthorids3_doc-level.ipynb)
+
+
+
+### 2.3 Wrangling data
 
 1. Merging and subsetting Web of Science files. 
 
 If you used the Web of Science online database - and your results exceeded 500 records - you will have downloaded multiple tab-delimited files (our recommended export format). After placing all exported tab-delimited files into one common folder, you can use the [Merge Multiple TSVs notebook](wos/notebooks/01_merge_multiple_tsvs.ipynb) to merge these files into one .csv file.
 
 
-### 2.2 Modifying the data
+### 2.4 Modifying the data
 1. Calculating author position
 2. [Remove self citations](notebooks_general\remove-self-citations.ipynb)
 
-### 2.3 Analyzing bibliometric metadata
+### 2.5 Analyzing bibliometric metadata
 
 1. Perform some preliminary exploratory data visualization with the [Metadata Analysis of Web of Science Data notebook](wos/notebooks/02_full-metadata-analysis.ipynb).
 
+<!--
+### 2.6 Text Analysis
 
-### 2.4 Text Analysis
 
-
-### 2.5 Citation Analysis
+### 2.7 Citation Analysis
+-->
